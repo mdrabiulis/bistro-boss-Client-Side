@@ -9,10 +9,15 @@ import slide2 from "../../assets/home/slide2.jpg";
 import slide3 from "../../assets/home/slide3.jpg";
 import slide4 from "../../assets/home/slide4.jpg";
 import slide5 from "../../assets/home/slide5.jpg";
+import SectionTitle from "../../Hooks/SectionTitle";
 
 const Category = () => {
   return (
-    <div className="my-10 ">
+    <section>
+      <SectionTitle subHeading={"From 11:00am to 10:00pm"}
+      heading={"ORDER ONLINE"}
+      ></SectionTitle>
+      <div className="my-10 ">
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -22,11 +27,11 @@ const Category = () => {
         modules={[Pagination]}
         className="mySwiper "
       >
-        <SwiperSlide className=" border border-red-800">
+        <SwiperSlide className="">
           <img src={slide1} alt="" className="w-[312px] h-[450px]"/>
           <h2 className="uppercase text-white text-3xl text-center -mt-16">Salads</h2>
         </SwiperSlide>
-        <SwiperSlide className="border border-red-800">
+        <SwiperSlide className="">
           <img src={slide2} alt="" className="w-[312px] h-[450px]"/>
           <h2 className="uppercase text-white text-3xl text-center -mt-16">pizzas</h2>
         </SwiperSlide>
@@ -44,6 +49,7 @@ const Category = () => {
         </SwiperSlide>
       </Swiper>
     </div>
+    </section>
   );
 };
 
