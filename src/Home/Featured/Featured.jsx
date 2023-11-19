@@ -5,10 +5,12 @@ import './featured.css'
 const Featured = () => {
   return (
     <section className="featured-item bg-fixed text-white pt-10 my-20">
-      <SectionTitle
+      <SectionTitle 
         heading={"FROM OUR MENU"}
         subHeading={"Check it out"}
-      ></SectionTitle>
+      >
+
+      </SectionTitle>
       <div className="flex items-center justify-center pb-20 bg-black bg-opacity-40 pt-12 px-36 ">
         <div className="">
           <img src={Featuredimg} alt="" />
