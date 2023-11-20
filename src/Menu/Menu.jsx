@@ -20,7 +20,7 @@ const Menu = () => {
   const dessert = ourPurpleMenu.filter((item) => item.category === "dessert");
   const salad = ourPurpleMenu.filter((item) => item.category === "salad");
   const drinks = ourPurpleMenu.filter((item) => item.category === "drinks");
-  const popular = ourPurpleMenu.filter((item) => item.category === "popular");
+  // const popular = ourPurpleMenu.filter((item) => item.category === "popular");
   const pizza = ourPurpleMenu.filter((item) => item.category === "pizza");
   const soup = ourPurpleMenu.filter((item) => item.category === "soup");
   const offered = ourPurpleMenu.filter((item) => item.category === "offered");
@@ -32,18 +32,13 @@ const Menu = () => {
       </Helmet>
 
       <ItemCover img={menuImg} title="our menu"></ItemCover>
-      <SectionTitle
-        subHeading="Don't miss"
-        heading="TODAY'S OFFER"
-      ></SectionTitle>
+      <SectionTitle subHeading="Don't miss" heading="TODAY'S OFFER"></SectionTitle>
+      
       <MenuCategory items={offered}></MenuCategory>
-
-
-      <MenuCategory items={dessert} title={"DESSERTS"} img={dessertImg}></MenuCategory>
-      <MenuCategory items={pizza} title={"PIZZA"} img={pizzaImg}></MenuCategory>
-      <MenuCategory items={salad} title={"SALADS"} img={saladImg}></MenuCategory>
-      <MenuCategory items={pizza} title={"PIZZA"} img={pizzaImg}></MenuCategory>
-      <MenuCategory items={soup} title={"SOUPS"} img={soupImg}></MenuCategory>
+      <MenuCategory items={dessert} title={"dessert"} img={dessertImg}></MenuCategory>
+      <MenuCategory items={pizza} title={"pizza"} img={pizzaImg}></MenuCategory>
+      <MenuCategory items={salad} title={"salad"} img={saladImg}></MenuCategory>
+      <MenuCategory items={soup} title={"soup"} img={soupImg}></MenuCategory>
       <MenuCategory items={drinks} title={"drinks"} img={soupImg}></MenuCategory>
     </div>
   );
