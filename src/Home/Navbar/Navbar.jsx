@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const navcomon = (
     <>
-      <li><a>Item 3</a></li>
+      <li><Link to={"/menu"} >Our Menu</Link></li>
       <li><a>Item 3</a></li>
       <li><a>Item 3</a></li>
     </>
