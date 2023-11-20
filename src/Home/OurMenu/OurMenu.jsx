@@ -1,29 +1,20 @@
-import { useEffect, useState } from "react";
+// import { useState } from "react";
 import MenuItems from "../../Hooks/MenuItems/MenuItems";
 import SectionTitle from "../../Hooks/SectionTitle";
+import useOurMenu from "../../Hooks/Our Menu Item/useOurMenu";
+import MenuCategory from "../../Hooks/MenuCategory/MenuCategory";
 
 const OurMenu = () => {
-  const [ourPurpleMenu, setOurPurpleMenu] = useState([]);
-  useEffect(() => {
-    fetch("menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const PurpleMenu = data.filter((item) => item.category === "popular");
-        setOurPurpleMenu(PurpleMenu);
-      });
-  }, []);
+  const { ourPurpleMenu } = useOurMenu();
+  const Purple = ourPurpleMenu.filter((item) => item.category === "popular");
+
   return (
-    <section >
+    <section>
       <SectionTitle
         subHeading={"Check it out"}
         heading={"FROM OUR MENU"}
       ></SectionTitle>
-      <div className="grid md:grid-cols-2 gap-4">
-        {ourPurpleMenu.map((item) => (
-          <MenuItems key={item._id} item={item}></MenuItems>
-        ))}
-      </div>
-      ;
+      <MenuCategory items={Purple}></MenuCategory>
     </section>
   );
 };
